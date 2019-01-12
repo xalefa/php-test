@@ -1,9 +1,9 @@
 <?php
 
 echo("Hello php <br>");
-echo("kali linux first edit");
+echo("kali linux first edit <br/>");
 $a=5;
 $b=6;
-$z=a+b;
-echo("This is sum A:"+a+" and B:"+b+" = "+z);
+echo $a+$b;
+
 ?>
