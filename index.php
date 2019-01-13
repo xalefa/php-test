@@ -24,6 +24,14 @@
         <div style="clear: both;"></div>
     </nav>
 
+
+
+    <div class="res_nav">
+        <h3 class="brand"><a href="#">فرۆشگای خونچە</a></h3>
+        <h4 class="menu">لیست</h4>
+        <div style="clear: both;"></div>
+    </div>
+
    <div align="center" class="alert alert-success" role="alert">
 <?php
 
@@ -36,11 +44,6 @@ echo $a+$b;
 ?>
 </div>
 
-    <div class="res_nav">
-        <h3 class="brand"><a href="#">فرۆشگای خونچە</a></h3>
-        <h4 class="menu">لیست</h4>
-        <div style="clear: both;"></div>
-    </div>
     <script src="js/jquery-3.3.0.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
