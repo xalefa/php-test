@@ -36,12 +36,45 @@
 <?php
 
 echo("<h3>Hello php</h3> <br>");
+echo("<h3>Write text here</h3> <br>");
 echo("kali linux first edit <br/>");
 $a=5;
 $b=6;
 echo $a+$b;
 
 ?>
+
+<?php
+$host = "ec2-54-225-89-195.compute-1.amazonaws.com";
+$user = "ybccvbftzfhebb";
+$password = "41dd770ae6ddda0cc7baa55b43b807b4a6aea0431aba1dee5885bb1c9ab0a70b";
+$dbname = "d6nvcovatlt6dg";
+$port = "5432";
+try{
+  //Set DSN data source name
+    $dsn = "pgsql:host=" . $host . ";port=" . $port .";dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
+  //create a pdo instance
+  $pdo = new PDO($dsn, $user, $password);
+  $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+  $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+echo 'Connection failed: ' . $e->getMessage();
+}
+
+
+  ?>
+
+  <?php
+$sql = 'SELECT * FROM users ';
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$rowCount = $stmt->rowCount();
+$details = $stmt->fetch();
+print_r ($details);
+  ?>
+
 </div>
 
     <script src="js/jquery-3.3.0.js"></script>
