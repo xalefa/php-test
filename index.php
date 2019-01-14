@@ -37,6 +37,7 @@
 
 echo("<h3>Hello php</h3> <br>");
 echo("<h3>Write text here</h3> <br>");
+echo("<h3>Write text here</h3> <br>");
 echo("kali linux first edit <br/>");
 $a=5;
 $b=6;
